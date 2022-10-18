@@ -1,0 +1,17 @@
+.centered {
+  text-align: center;
+}
+.bckgrnd {
+  
+  background-repeat: repeat-x;
+  width:100vw;
+  height: 700px;
+ background-image: url("iamlegend.jpg"); 
+}
+#indented{
+  padding: 0 0 0 10vw;
+  background-color: #000000;
+}
+#beandip {
+  color:white;
+}

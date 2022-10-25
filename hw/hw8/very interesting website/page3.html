@@ -1,0 +1,104 @@
+<html lang="en">
+<head>
+  <title>Contact Us</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+
+<script>
+  function validateForm() {
+    
+    var a = document.getElementById("firstNameInput").value;
+    var b = document.getElementById("lastNameInput").value;
+    var c = document.getElementById("emailInput").value;
+    var d = document.getElementById("termsInput").checked;
+
+    
+    let inputId = ["firstNameInput", "lastNameInput", "emailInput", "termsInput"]
+    let inputLengths = [a.length, b.length, c.length]
+
+    //alert(inputLengths);
+
+    if (a.length == 0 || b.length == 0 || c.length == 0 || d == false) {
+      alert("Please Fill All Required Fields");
+
+      for (let i = 0; i < 3; i++) {
+        if(inputLengths[i] === 0) {
+		
+		
+		if(d === false) {
+			document.getElementById("termsMessage").innerHTML = "* Please agree to the Terms & Conditions";
+		} else {
+			document.getElementById("termsMessage").innerHTML = "";
+		}
+		
+        document.getElementById(inputId[inputLengths.indexOf(0)]).focus();
+        document.getElementById(inputId[i]).style.backgroundColor  = "#FFD0D0";
+		  
+        }
+      }
+
+
+      
+      
+    } else {
+      window.location.replace("congrats.html");
+    }
+    
+  }
+</script>
+  
+<body>
+    <head></head>
+    <body>
+      <br><br>
+      
+        <h1 style="text-align:center">Contact Us</h1>
+        <p></p>
+        <form action="">
+
+          
+<div class="container mt-3">  
+  <form method="post" name="Form" onsubmit="return validateForm()" action="">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        
+      </div>
+      <input type="text" class="form-control" placeholder="First Name" id="firstNameInput" name="First Name">
+      
+      <input type="text" class="form-control" placeholder="Last Name" id="lastNameInput" name="Last Name">
+    </div>
+
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Your Email" id="emailInput" name="Email">
+    </div>
+           <input type="checkbox" name="Terms" id="termsInput"> &nbsp; I agree to the <a href="sus.html">Terms & Coditions</a></input>
+		   
+		   <p id="termsMessage" style="color:#FF9D9D"></p>
+            
+
+  
+  <input type="button" class="btn btn-primary" id="Form" value="Submit" onclick="validateForm()"/>
+  
+  </form>
+</div>
+
+          
+    
+        </form>
+        <p style="text-align:center"><a href="index.html">Very Intresting Homepage</a></p>
+        <p style="text-align:center"><a href="page2.html">Go to the Short Story</a></p>
+        <p style="text-align:center"><a href="mathgame.html">Go to Math Game</a></p>
+
+
+
+
+      
+    </body>
+  
+</html>

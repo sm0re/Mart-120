@@ -1,0 +1,96 @@
+<html>
+<title>Math Game</title>
+
+<head>
+  <script>
+    var actualAnswer;
+    var number1;
+    var number2;
+
+    let correctAnswers = 0;
+    let incorrectAnswers = 0;
+    let numberOfGames = 1;
+
+    function printQuestion() {
+
+     if(numberOfGames === 11) {
+      alert("Game Finished!\n\nCorrect: " + correctAnswers + "\nIncorrect: " + incorrectAnswers + "\nPercent Correct: " + (100 * correctAnswers) / 10 + "%");
+      location.reload();
+    }
+
+      
+      numberOfGames += 1
+      number1 = Math.floor(Math.random() * 10);
+      number2 = Math.floor(Math.random() * 10);
+      actualAnswer = number1 + number2;
+      document.getElementById("theQuestion").innerHTML = "What is " + number1 + "+" + number2 + "?";
+    
+      document.getElementById("currentScore").innerHTML = "Correct:" + correctAnswers + "<br>Incorrect: " + incorrectAnswers;
+        
+      
+    }
+
+    function checkAnswer() {
+
+      var answer = document.getElementById("txtAnswer").value;
+      if (answer == actualAnswer) {
+        correctAnswers += 1
+        document.getElementById("finalResult").innerHTML = "Good job!";
+        printQuestion();
+      } else {
+        incorrectAnswers += 1
+        document.getElementById("finalResult").innerHTML = "Try Again!";
+        printQuestion();
+      }
+    }
+
+    function runGame() {
+
+      
+      
+      // change the for loop and see what happens
+      for (var i = 1; i < 6; i++) {
+        document.getElementById("message").innerHTML += "<h" + i + ">Welcome to our game!!!</h" + i + "></p>";
+      }
+      printQuestion();
+    }
+    runGame();
+  </script>
+</head>
+
+<body onload="runGame();">
+
+  <table>
+    <tr>
+      <td colspan="2">
+        <div id="message"></div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <hr size="1">
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <div id="theQuestion"></div>
+      </td>
+    </tr>
+    <tr>
+      <td>Your answer</td>
+      <td><input type="text" id="txtAnswer"></td>
+    </tr>
+    <tr>
+      <td colspan="2"><button id="btnSubmit" onClick="checkAnswer();">Submit</button></td>
+    </tr>
+  </table>
+  <div id="finalResult"></div>
+  <div id="currentScore"></div>
+</body>
+
+
+        <p style="text-align:center"><a href="index.html">Very Intresting Homepage</a></p>
+        <p style="text-align:center"><a href="page2.html">Go to the Short Story</a></p>
+        <p style="text-align:center"><a href="page3.html">Go to Contact Us</a></p>
+
+</html>

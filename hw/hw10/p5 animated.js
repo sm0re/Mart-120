@@ -7,12 +7,12 @@ var x2 = 360;
 
 function setup() {
   createCanvas(400, 400);
-  movement = (Math.random(1,15));
+  movement = (Math.random(5,15));
 }
 function draw() {
 background(220);
 ellipse(x,175,30,60);
-ellipse(360,175,30,60);
+ellipse(x2,175,30,60);
 ellipse(200,200,300,400);
 triangle(220, 250, 180, 250, 200, 220);
 square(220,100,100,);
@@ -73,11 +73,20 @@ text("Not Heisenberg",30,390 );
   
 if(x >= 200 || x <= 0)
 {
-   movement *= -1;
+    x += movement;
 }
 
  x += movement;
 
+
+if(x2 >= 200 || x2 <= 0)
+{
+    x2 += -movement;
+}
+
+
+
+  
   
 if (y >= 90 && y <= 1) {
     movement *= -1;

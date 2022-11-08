@@ -5,6 +5,11 @@ var movement;
 var x = 40;
 var x2 = 360;
 
+var counter = 1;
+var five = 0;
+
+textSizer = 12;
+
 function setup() {
   createCanvas(400, 400);
   movement = (Math.random(5,15));
@@ -67,7 +72,7 @@ strokeWeight(10)
 line(80, 145, 180, 145);
 line(220, 145, 320, 145);
 strokeWeight(5)
-textSize(12);
+textSize(textSizer);
 text("Seth Terry",300,390 );
 text("Not Heisenberg",30,390 );
   
@@ -97,5 +102,15 @@ if (y2 >= 90 || y2 <= 1) {
     movement *= -1;
   }
  y2 += movement;
-  
+
+
+if((five % 5 == 0) && counter == 1) {
+  textSizer+=60;
+  counter *= -1;
+}else if((five % 5 == 0) && counter == -1) {
+  textSizer-=60;
+  counter *= -1;
+}
+ 
+five++;
 }

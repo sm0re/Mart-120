@@ -1,15 +1,17 @@
-
 var y = 99;
 var y2 = 90
 var movement;
 
+var x = 40;
+var x2 = 360;
+
 function setup() {
   createCanvas(400, 400);
-  movement = Math.floor(Math.random() * 3) + 1;
+  movement = (Math.random(1,15));
 }
 function draw() {
 background(220);
-ellipse(40,175,30,60);
+ellipse(x,175,30,60);
 ellipse(360,175,30,60);
 ellipse(200,200,300,400);
 triangle(220, 250, 180, 250, 200, 220);
@@ -69,8 +71,15 @@ textSize(12);
 text("Seth Terry",300,390 );
 text("Not Heisenberg",30,390 );
   
+if(x >= 200 || x <= 0)
+{
+   movement *= -1;
+}
+
+ x += movement;
+
   
-if (y >= 90 || y <= 1) {
+if (y >= 90 && y <= 1) {
     movement *= -1;
   }
  y = 90 + movement;

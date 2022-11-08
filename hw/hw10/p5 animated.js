@@ -72,8 +72,9 @@ strokeWeight(10)
 line(80, 145, 180, 145);
 line(220, 145, 320, 145);
 strokeWeight(5)
-textSize(textSizer);
+textSize(12);
 text("Seth Terry",300,390 );
+  textSize(textSizer);
 text("Not Heisenberg",30,390 );
   
 if(x >= 200 || x <= 0)
@@ -104,10 +105,10 @@ if (y2 >= 90 || y2 <= 1) {
  y2 += movement;
 
 
-if((five % 5 == 0) && counter == 1) {
+if((five % 50 == 0) && counter == 1) {
   textSizer+=60;
   counter *= -1;
-}else if((five % 5 == 0) && counter == -1) {
+}else if((five % 50 == 0) && counter == -1) {
   textSizer-=60;
   counter *= -1;
 }

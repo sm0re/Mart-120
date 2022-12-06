@@ -12,6 +12,10 @@ function setup() {
   obstacleMovement();
 }
 
+function getRandomNumber(number) {
+    return Math.floor(Math.random() * number) + 10;
+}
+
 // Function to place object on mouse click
 function mousePressed() {
   
@@ -19,6 +23,11 @@ function mousePressed() {
     x: mouseX,
     y: mouseY
   });
+  
+  staticCircles.push({
+  x: getRandomNumber(1000),
+  y: getRandomNumber(1000)
+});
 }
 
 
@@ -105,7 +114,7 @@ function obstacleMovement() {
       speedyX: randInt1,
       speedyY: randInt2
     });
-      
+    
     
   }
 }

@@ -1,0 +1,143 @@
+body {
+  background-image: url('images/Background.png');
+}
+
+@import "./node_modules/nes.css/css/nes.css";
+
+@font-face {
+  font-family: 'PressStart2P';
+  src: url('PressStart2P-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'kongtext';
+  src: url('kongtext.ttf');
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin: -30px auto;
+}
+
+.nav-item {
+  display: inline-block;
+  text-align: center;
+  margin: auto 15px auto 15px;
+  font-size: 18px;
+}
+
+.nav-item img {
+  width: 75px;
+  height: 75px;
+  margin: 10px auto;
+}
+
+.nav-active {
+  background-color: rgba(92, 72, 135, 0.6);
+}
+
+
+.centered {
+  text-align: center;
+}
+
+
+.eight-bit {
+  font-family: kongtext;
+}
+
+.white {
+  color: white;
+  text-decoration: none;
+}
+
+.green {
+  color: #66FF66;
+  text-decoration: none;
+}
+
+
+.window-container {
+  transform: scale(1.5);
+}
+
+
+
+.right {
+  margin: auto auto auto 15vw;
+}
+
+.left {
+  margin: auto 15vw auto auto;
+}
+
+.artwork {
+  width: 280px;
+    display: flex;
+  justify-content: center;
+}
+
+
+.logo {
+  width:300px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+
+
+.typed-out{
+    overflow: hidden;
+    border-right: .15em solid white;
+    white-space: nowrap;
+    font-size: 1.6rem;
+    width: 0;
+    animation: 
+      typing 3s steps(200, end) forwards,
+      blinky .8s infinite;
+  
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blinky {
+  from { border-color: transparent }
+  to { border-color: white; }
+}
+
+
+
+
+
+
+  .icon-list {
+  margin: 0 auto;
+}
+
+  .icon-list {
+  text-align: center;
+}
+
+    nav{
+  margin: 0 auto;
+}
+
+  nav {
+  text-align: center;
+}
+
+
+.nes-icon {
+  margin: 0 25px;
+}
